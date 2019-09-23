@@ -27,9 +27,10 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginBottom="8dp"
             android:background="#4D000000"
             android:drawableStart="@drawable/ic_collections_white_18dp"
-            android:drawableLeft="@drawable/ic_collections_white_18dp"
             android:drawablePadding="4dp"
             android:elevation="2dp"
             android:padding="8dp"
@@ -87,6 +88,40 @@
             app:layout_constraintTop_toBottomOf="@+id/text_stock"
             app:layout_editor_absoluteX="0dp"
             app:layout_editor_absoluteY="429dp" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_begin="472dp" />
+
+        <include
+            android:id="@+id/include_seller"
+            layout="@layout/layout_seller"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/include_specifications" />
+
+        <include
+            android:id="@+id/include_specifications"
+            layout="@layout/layout_specification"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toTopOf="@+id/include_seller"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/guideline" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </ScrollView>
